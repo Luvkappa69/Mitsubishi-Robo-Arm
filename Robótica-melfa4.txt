@@ -1,0 +1,437 @@
+10 dly 2
+11 ovrd 60
+12 dly 1
+20 mov p1 'posição de repouso
+30 dly 1
+40 hopen 1
+50 dly 1
+60 if m_in (8) =1 then 70 else 10
+70 dly 2
+80 mvs p2 'segurança pino
+90 dly 1
+100 ovrd 30
+110 dly 1
+120 '-------- leitura pinos pretos 
+130 mvs p3 'leitura pino preto 1
+140 dly 2
+150 if m_in (9) =1 then 320 else 160
+160 dly 1
+170 ovrd 10
+180 dly 1
+190 mvs p4 'leitura pino preto 2
+200 dly 2
+210 if m_in (9) =1 then 470 else 220
+220 dly 1
+230 mvs p5 'leitura pino preto 3
+240 dly 2
+250 if m_in (9) =1 then 620 else 260
+260 dly 1
+270 mvs p6 'leitura pino preto 4
+280 dly 2
+290 if m_in (9) =1 then 770 else 291
+291 dly 1
+292 mvs p14 'seguranca pino preto 4
+293 dly 1
+294 goto 70
+300 '-------- leitura pinos pretos
+310 '-------- agarrar pinos pretos
+320 '-------- -------- agarra pino preto 1
+330 dly 1 
+340 mov p11 'segurança pino preto 1
+350 dly 1
+360 ovrd 10
+370 dly 1
+380 mvs p7 'agarra pino 1
+390 dly 1
+400 hclose 1
+410 dly 1
+420 mov p11 'segurança pino preto 1
+430 dly 1
+440 mvs p2 'segurança pinos
+450 dly 1
+460 goto 900
+470 '-------- -------- agarra pino preto 2
+480 dly 1 
+490 mov p12 'segurança pino preto 2
+500 dly 1
+510 ovrd 10
+520 dly 1
+530 mvs p8 'agarra pino 2
+540 dly 1
+550 hclose 1
+560 dly 1
+570 mov p12 'segurança pino preto 2
+580 dly 1
+590 mvs p2 'segurança pinos
+600 dly 1
+610 goto 900
+620 '-------- -------- agarra pino preto 3
+630 dly 1 
+640 mov p13 'segurança pino preto 3
+650 dly 1
+660 ovrd 10
+670 dly 1
+680 mvs p9 'agarra pino 3
+690 dly 1
+700 hclose 1
+710 dly 1
+720 mov p13 'segurança pino preto 3
+730 dly 1
+740 mvs p2 'segurança pinos
+750 dly 1
+760 goto 900
+770 '-------- -------- agarra pino preto 4
+780 dly 1 
+790 mov p14 'segurança pino preto 4
+800 dly 1
+810 ovrd 10
+820 dly 1
+830 mvs p10 'agarra pino 4
+840 dly 1
+850 hclose 1
+860 dly 1
+870 mov p14 'segurança pino preto 4
+880 dly 1
+890 mvs p2 'segurança pinos
+900 dly 1
+910 '-------- agarrar pinos pretos 
+920 '-------- depositar pino preto no copo A 
+921 dly 2
+930 ovrd 40
+940 dly 1
+950 mov p1 'repouso
+960 dly 1
+970 ovrd 30
+980 dly 1
+990 mvs p15 'seguranca copo A
+1000 dly 1
+1010 mvs p16 'depositar no copo A
+1020 dly 1
+1030 hopen 1
+1040 dly 1
+1050 mvs p15 'seguranca copo A
+1060 dly 1
+1070 '-------- depositar pino preto no copo A 
+1080 '-------- buscar mola
+1090 ovrd 40
+1100 dly 1
+1110 mov p1 ' repouso
+1120 dly 1
+1130 mvs p17 'seguranca da mola
+1140 dly 1
+1150 ovrd 20
+1160 dly 1
+1170 mvs p18 'agarrar mola
+1180 dly 1
+1190 hclose 1
+1200 dly 1
+1210 mvs p17 'seguranca da mola
+1220 dly 1
+1230 ovrd 30
+1240 '-------- buscar mola
+1250 '-------- colocar mola copo B
+1251 dly 1
+1260 mov p1 'repouso
+1270 dly 1
+1280 mvs p19 'seguranca copo B
+1290 dly 1
+1300 mvs p20 'depositar mola no copo B
+1310 dly 1
+1320 hopen 1
+1330 dly 1
+1340 mvs p19 'seguranca copo B
+1350 dly 1
+1360 '-------- colocar mola copo B
+1370 '-------- buscar peça 1º retentor
+1380 ovrd 40
+1390 dly 1
+1400 mov p1 'repouso
+1410 dly 1
+1420 mvs p21 'seguranca 1º retentor
+1430 dly 1
+1440 ovrd 20
+1450 dly 1
+1460 mvs p22 'agarrar peça 1º retentor
+1470 dly 1
+1480 hclose 1
+1490 dly 1
+1500 mvs p21 'seguranca 1º retentor
+1510 dly 1
+1520 '-------- buscar peça 1º retentor
+1530 '-------- colocar peça 2º retentor
+1531 ovrd 40
+1532 dly 1
+1540 mov p23 'seguranca peça 2º retentor
+1541 dly 1
+1542 ovrd 20
+1550 dly 1
+1560 mvs p24 'depositar peça 2º retentor
+1570 dly 1
+1580 hopen 1
+1590 dly 1
+1600 mvs p23 'seguranca peça 2º retentor
+1610 dly 1
+1620 '-------- colocar peça 2º retentor
+1630 '-------- ler cor da peca
+1640 mvs p25 'seguranca de leitura da cor
+1650 dly 1
+1660 mvs p26 'posiçao de leitura
+1670 dly 2
+1680 if m_in (9) =1 then 2780 else 1710 
+1690 '-------- ler cor da peca
+1700 '-------- -------- se for preta
+1710 '-------- peça preta
+1720 dly 1
+1730 mvs p25 'seguranca de leitura da cor
+1740 dly 1
+1750 ovrd 40
+1760 dly 1
+1770 mvs p1 'repouso
+1780 dly 1
+1790 mvs p2 'segurança pinos
+1800 dly 1
+1810 ovrd 30
+1820 dly 1
+1830 '-------- leitura pinos pretos 
+1840 mvs p3 'leitura pino preto 1
+1850 dly 2
+1860 if m_in (9) =1 then 2030 else 1870
+1870 dly 1
+1880 ovrd 10
+1890 dly 1
+1900 mvs p4 'leitura pino preto 2
+1910 dly 2
+1920 if m_in (9) =1 then 2180 else 1930
+1930 dly 1
+1940 mvs p5 'leitura pino preto 3
+1950 dly 2
+1960 if m_in (9) =1 then 2330 else 1970
+1970 dly 1
+1980 mvs p6 'leitura pino preto 4
+1990 dly 2
+2000 if m_in (9) =1 then 2480 else 2001
+2001 dly 1
+2002 mvs p14 'seguranca pino preto 4
+2003 dly 1
+2004 goto 1780
+2010 '-------- leitura pinos pretos
+2020 '-------- agarrar pinos pretos
+2030 '-------- -------- agarra pino preto 1
+2040 dly 1 
+2050 mov p11 'segurança pino preto 1
+2060 dly 1
+2070 ovrd 10
+2080 dly 1
+2090 mvs p7 'agarra pino 1
+2100 dly 1
+2110 hclose 1
+2120 dly 1
+2130 mov p11 'segurança pino preto 1
+2140 dly 1
+2150 mvs p2 'segurança pino
+2160 dly 1
+2170 goto 2610
+2180 '-------- -------- agarra pino preto 2
+2190 dly 1 
+2200 mov p12 'segurança pino preto 2
+2210 dly 1
+2220 ovrd 10
+2230 dly 1
+2240 mvs p8 'agarra pino 2
+2250 dly 1
+2260 hclose 1
+2270 dly 1
+2280 mov p12 'segurança pino preto 2
+2290 dly 1
+2300 mvs p2 'segurança pino
+2310 dly 1
+2320 goto 2610
+2330 '-------- -------- agarra pino preto 3
+2340 dly 1 
+2350 mov p13 'segurança pino preto 3
+2360 dly 1
+2370 ovrd 10
+2380 dly 1
+2390 mvs p9 'agarra pino 3
+2400 dly 1
+2410 hclose 1
+2420 dly 1
+2430 mov p13 'segurança pino preto 3
+2440 dly 1
+2450 mvs p2 'segurança pino
+2460 dly 1
+2470 goto 2610
+2480 '-------- -------- agarra pino preto 4
+2490 dly 1 
+2500 mov p14 'segurança pino preto 4
+2510 dly 1
+2520 ovrd 10
+2530 dly 1
+2540 mvs p10 'agarra pino 4
+2550 dly 1
+2560 hclose 1
+2570 dly 1
+2580 mov p14 'segurança pino preto 4
+2590 dly 1
+2600 mvs p2 'segurança pino
+2610 dly 1
+2620 '-------- agarrar pinos pretos 
+2630 '-------- depositar pino preto no copo A 
+2640 ovrd 30
+2650 dly 1
+2660 mov p1 'repouso
+2670 dly 1
+2680 mvs p15 'seguranca copo A
+2690 dly 1
+2700 mvs p16 'depositar no copo A
+2710 dly 1
+2720 hopen 1
+2730 dly 1
+2740 mvs p15 'seguranca copo A
+2750 dly 1
+2760 goto 3830
+2770 '-------- se for preta
+2780 '-------- se for vermelha
+2790 '-------- -------- peça vermelha
+2800 dly 1
+2810 mvs p25 'seguranca de leitura da cor
+2820 dly 1
+2830 ovrd 40
+2840 dly 1
+2850 mvs p1 'repouso
+2860 dly 1
+2870 mvs p27 'segurança pinos
+2880 dly 1
+2890 ovrd 30
+2900 dly 1
+2910 '-------- leitura pinos cinzentos 
+2920 mvs p28 'leitura pino cinzento 1
+2930 dly 2
+2940 if m_in (9) =1 then 3110 else 2950
+2950 dly 1
+2960 ovrd 10
+2970 dly 1
+2980 mvs p29 'leitura pino cinzento 2
+2990 dly 2
+3000 if m_in (9) =1 then 3260 else 3010
+3010 dly 1
+3020 mvs p30 'leitura pino cinzento 3
+3030 dly 2
+3040 if m_in (9) =1 then 3410 else 3050
+3050 dly 1
+3060 mvs p31 'leitura pino cinzento 4
+3070 dly 2
+3080 if m_in (9) =1 then 3560 else 3081
+3081 dly 1
+3082 mvs p39 'seguranca pino preto 4
+3083 dly 1
+3084 goto 2860
+3090 '-------- leitura pinos cinzentos
+3100 '-------- agarrar pinos cinzentos
+3110 '-------- -------- agarra pino cinzento 1
+3120 dly 1 
+3130 mov p36 'segurança pino cinzento 1
+3140 dly 1
+3150 ovrd 10
+3160 dly 1
+3170 mvs p32 'agarra cinzento 1
+3180 dly 1
+3190 hclose 1
+3200 dly 1
+3210 mov p36 'segurança pino cinzento 1
+3220 dly 1
+3230 mvs p27 'segurança cinzento
+3240 dly 1
+3250 goto 3690
+3260 '-------- -------- agarra pino cinzento 2
+3270 dly 1 
+3280 mov p37 'segurança pino cinzento 2
+3290 dly 1
+3300 ovrd 10
+3310 dly 1
+3320 mvs p33 'agarra pino cinzento 2
+3330 dly 1
+3340 hclose 1
+3350 dly 1
+3360 mov p37 'segurança pino cinzento 2
+3370 dly 1
+3380 mvs p27 'segurança pinos
+3390 dly 1
+3400 goto 3690
+3410 '-------- -------- agarra pino cinzento 3
+3420 dly 1 
+3430 mov p38 'segurança pino cinzento 3
+3440 dly 1
+3450 ovrd 10
+3460 dly 1
+3470 mvs p34 'agarra cinzento 3
+3480 dly 1
+3490 hclose 1
+3500 dly 1
+3510 mov p38 'segurança pino cinzento 3
+3520 dly 1
+3530 mvs p27 'segurança pino
+3540 dly 1
+3550 goto 3690
+3560 '-------- -------- agarra pino cinzento 4
+3570 dly 1 
+3580 mov p39 'segurança pino cinzento 4
+3590 dly 1
+3600 ovrd 10
+3610 dly 1
+3620 mvs p35 'agarra cinzento 4
+3630 dly 1
+3640 hclose 1
+3650 dly 1
+3660 mov p39 'segurança pino cinzento 4
+3670 dly 1
+3680 mvs p27 'segurança pino
+3690 dly 1
+3700 '-------- agarrar pinos cinzentos 
+3710 '-------- depositar pino cinzento no copo B
+3720 ovrd 30
+3730 dly 1
+3740 mov p1 'repouso
+3750 dly 1
+3760 mvs p19 'seguranca copo B
+3770 dly 1
+3780 mvs p20 'depositar no copo B
+3790 dly 1
+3800 hopen 1
+3810 dly 1
+3820 mvs p19 'seguranca copo B
+3830 dly 1
+3840 '-------- se for vermelha
+3850 '-------- buscar peca ao 2º retentor 
+3860 mov p1 'repouso
+3870 dly 1
+3880 mvs p23 'seguranca peça 2º retentor
+3890 dly 1
+3900 mvs p24 'agarrar peça 2º retentor
+3910 dly 1
+3920 hclose 1
+3930 dly 1
+3940 mvs p23 'seguranca peça 2º retentor
+3950 dly 1
+3960 '-------- buscar peca ao 2º retentor 
+3970 '-------- coloca peca na rampa de saida 
+3980 ovrd 40
+3990 dly 1
+4000 mov p1 'repouso
+4010 dly 1
+4020 mvs p40 'segurança da rampa
+4030 dly 1
+4040 ovrd 20
+4050 dly 1
+4060 mvs p41 'depositar na rampa
+4070 dly 1
+4080 hopen 1
+4090 dly 1
+4100 '-------- coloca peca na rampa de saida 
+4110 '-------- volta posiçao reposo e acaba o programa
+4120 mvs p40 'segurança da rampa
+4130 dly 1
+4140 ovrd 40
+4150 mvs p1 ' repouso
+4160 '-------- volta posiçao reposo e acaba o programa
+4170 end
